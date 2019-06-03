@@ -12,12 +12,13 @@ import background from '../resources/background.jpg'
 import logo from '../resources/logo.png'
 
 
-export default class LoginScreen extends React.Component {
+export default class RegistrationScreen extends React.Component {
 
     constructor(props) {
         super(props)
         this.state = {
             naam: 'Naam',
+            school: "Jouw school",
             wachtwoord: 'Wachtwoord'
         }
     }
@@ -36,6 +37,11 @@ export default class LoginScreen extends React.Component {
                     <View style={styles.buttonContainer}>
 
                         <TextInput style={[styles.pillButton, styles.transparentGray]}
+                            onChangeText={(text) => this.setState({ school: text })}
+                            value={this.state.school}>
+                        </TextInput>
+
+                        <TextInput style={[styles.pillButton, styles.transparentGray]}
                             onChangeText={(text) => this.setState({ naam: text })}
                             value={this.state.naam}>
 
@@ -47,9 +53,8 @@ export default class LoginScreen extends React.Component {
 
                         </TextInput>
 
-                        <TouchableHighlight style={[styles.pillButton, styles.orange]}
-                            onPress={() => this.props.navigation.navigate('CharCreateScreen')}>
-                            <Text style={[styles.pillButtonText]} >Inloggen</Text>
+                        <TouchableHighlight style={[styles.pillButton, styles.orange]}>
+                            <Text style={[styles.pillButtonText]} >Aanmelden</Text>
                         </TouchableHighlight>
                     </View>
                 </View>

@@ -11,7 +11,7 @@ import background from '../resources/background.jpg'
 import logo from '../resources/logo.png'
 
 
-export default class HomeScreen extends React.Component {
+export default class SelectionScreen extends React.Component {
   static navigationOptions = {
     header: null,
   };
@@ -26,16 +26,24 @@ export default class HomeScreen extends React.Component {
           <View style={styles.buttonContainer}>
             <TouchableHighlight style={[styles.pillButton, styles.blue]}
               onPress={() => this.props.navigation.navigate('LoginScreen')}>
-              <Text style={[styles.pillButtonText]}>Inloggen</Text>
+              <Text style={[styles.pillButtonText]}>Speurtocht</Text>
             </TouchableHighlight>
 
-            <TouchableHighlight style={[styles.pillButton, styles.gray]}
+            <TouchableHighlight style={[styles.pillButton, styles.blue]}
               onPress={() => this.props.navigation.navigate('RegistrationScreen')}>
-              <Text style={[styles.pillButtonText]} >Aanmelden</Text>
+              <Text style={[styles.pillButtonText]} >Punten</Text>
+            </TouchableHighlight>
+
+            <TouchableHighlight style={[styles.pillButton, styles.blue]}>
+              <Text style={[styles.pillButtonText]} >Profiel</Text>
+            </TouchableHighlight>
+
+            <TouchableHighlight style={[styles.pillButton, styles.blue]}>
+              <Text style={[styles.pillButtonText]} >Uitleg</Text>
             </TouchableHighlight>
 
             <TouchableHighlight style={[styles.pillButton, styles.orange]}>
-              <Text style={[styles.pillButtonText]} >Uitleg</Text>
+              <Text style={[styles.pillButtonText]} >Uitloggen</Text>
             </TouchableHighlight>
           </View>
         </View>
@@ -69,8 +77,8 @@ const styles = StyleSheet.create({
     paddingRight: 30
   },
   pillButton: {
-    paddingTop: 20,
-    paddingBottom: 20,
+    paddingTop: 10,
+    paddingBottom: 10,
     paddingLeft: 20,
     paddingRight: 20,
     borderRadius: 64,

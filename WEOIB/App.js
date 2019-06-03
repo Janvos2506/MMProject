@@ -8,6 +8,8 @@ import LoginScreen from './screens/LoginScreen'
 import CharCreateScreen from './screens/CharCreateScreen'
 import GameSelectionScreen from './screens/GameSelectionScreen';
 import MasterMindScreen from './screens/MasterMindScreen'
+import RegistrationScreen from "./screens/RegistrationScreen";
+import SelectionScreen from "./screens/SelectionScreen";
 const AppNavigator = createStackNavigator(
   {
     Home: HomeScreen,
@@ -16,10 +18,12 @@ const AppNavigator = createStackNavigator(
     LoginScreen: LoginScreen,
     CharCreateScreen: CharCreateScreen,
     GameSelectionScreen: GameSelectionScreen,
-    MasterMindScreen: MasterMindScreen
+    MasterMindScreen: MasterMindScreen,
+    RegistrationScreen: RegistrationScreen,
+    SelectionScreen: SelectionScreen
   },
   {
-    initialRouteName: "LoginScreen"
+    initialRouteName: "Home"
   }
 );
 const AppContainer = createAppContainer(AppNavigator);
