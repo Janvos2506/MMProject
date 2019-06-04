@@ -25,7 +25,7 @@ export default class SelectionScreen extends React.Component {
           </View>
           <View style={styles.buttonContainer}>
             <TouchableHighlight style={[styles.pillButton, styles.blue]}
-              onPress={() => this.props.navigation.navigate('LoginScreen')}>
+              onPress={() => this.props.navigation.navigate('SpeurtochtOverviewScreen')}>
               <Text style={[styles.pillButtonText]}>Speurtocht</Text>
             </TouchableHighlight>
 
