@@ -21,28 +21,28 @@ export default class GameScreen extends React.Component {
         return (
             <ImageBackground source={gameBackground} style={{ width: '100%', height: '100%' }} resizeMode='cover'>
                 <TouchableHighlight style={{
-                    position: 'absolute', top: 0, left: 0, width: 200, height: 200, flex: 1,
+                    position: 'absolute', top: 0, left: 0, width: "50%", height: "50%", flex: 1,
                     justifyContent: 'center',
                     alignItems: 'center'
                 }}>
                     <Text>Ooijpolder</Text>
                 </TouchableHighlight>
                 <TouchableHighlight style={{
-                    position: 'absolute', top: 0, left: 200, width: 200, height: 100, flex: 1,
+                    position: 'absolute', top: 0, left: "50%", width: "50%", height: "50%", flex: 1,
                     justifyContent: 'center',
                     alignItems: 'center'
                 }}>
                     <Text>Terug</Text>
                 </TouchableHighlight>
                 <TouchableHighlight style={{
-                    position: 'absolute', top: 500, left: 0, width: 200, height: 300, flex: 1,
+                    position: 'absolute', top: "50%", left: 0, width: "50%", height: "50%", flex: 1,
                     justifyContent: 'center',
                     alignItems: 'center'
                 }}>
                     <Text>Route</Text>
                 </TouchableHighlight>
                 <TouchableHighlight style={{
-                    position: 'absolute', top: 500, left: 200, width: 200, height: 300, flex: 1,
+                    position: 'absolute', top: "50%", left: "50%", width: "50%", height: "50%", flex: 1,
                     justifyContent: 'center',
                     alignItems: 'center'
                 }}>
