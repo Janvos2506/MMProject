@@ -20,8 +20,8 @@ export default class HomeScreen extends React.Component {
     return (
       <ImageBackground source={background} style={{ width: '100%', height: '100%' }} resizeMode='cover'>
         <View style={styles.MainContainer}>
-          <View styles={styles.logoContainer}>
-            <Image source={logo} style={{ width: '100%' }} resizeMode={'contain'}></Image>
+          <View style={styles.logoContainer}>
+            <Image source={logo} style={{ flex: 1, height: undefined, width: undefined }} resizeMode="contain" />
           </View>
           <View style={styles.buttonContainer}>
             <TouchableHighlight style={[styles.pillButton, styles.blue]}
@@ -47,6 +47,8 @@ export default class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   MainContainer: {
     flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'space-between',
     padding: 20,
     paddingTop: 30
   },
@@ -60,11 +62,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#795c46'
   },
   logoContainer: {
-    backgroundColor: 'red',
-    width: '100%',
-    height: '100%'
+    height: '40%',
+    paddingLeft: 30,
+    paddingRight: 30
   },
   buttonContainer: {
+    height: '60%',
+    justifyContent: 'space-between',
     paddingLeft: 30,
     paddingRight: 30
   },
@@ -75,7 +79,6 @@ const styles = StyleSheet.create({
     paddingRight: 20,
     borderRadius: 64,
     justifyContent: 'center',
-    marginBottom: 40,
     alignItems: 'center'
   },
   pillButtonText: {
@@ -83,4 +86,3 @@ const styles = StyleSheet.create({
     fontSize: 20
   }
 });
-
