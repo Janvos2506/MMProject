@@ -29,12 +29,11 @@ export default class SelectionScreen extends React.Component {
               <Text style={[styles.pillButtonText]}>Speurtocht</Text>
             </TouchableHighlight>
 
-            <TouchableHighlight style={[styles.pillButton, styles.blue]}
-              onPress={() => this.props.navigation.navigate('RegistrationScreen')}>
+            <TouchableHighlight style={[styles.pillButton, styles.blue]}>
               <Text style={[styles.pillButtonText]} >Punten</Text>
             </TouchableHighlight>
 
-            <TouchableHighlight style={[styles.pillButton, styles.blue]}>
+            <TouchableHighlight style={[styles.pillButton, styles.blue]} onPress={() => this.props.navigation.navigate('ProfileScreen')}>
               <Text style={[styles.pillButtonText]} >Profiel</Text>
             </TouchableHighlight>
 

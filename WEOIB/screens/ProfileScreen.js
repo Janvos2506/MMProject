@@ -5,7 +5,8 @@ import {
   Text,
   View,
   ImageBackground,
-  TouchableHighlight
+  TouchableHighlight,
+  TextInput
 } from 'react-native';
 import background from '../resources/background.jpg'
 import logo from '../resources/logo.png'
@@ -51,26 +52,52 @@ export default class ProfileScreen extends React.Component {
           </View>
 
           <View style={styles.charSelectorContainer}>
+            <View style={{ backgroundColor: '#ffffff', width: "100%", height: 5, marginTop: 10 }}></View>
             <ScrollView horizontal={true} pagingEnabled={true} decelerationRate="fast" onMomentumScrollEnd={(e) => this.updateHeader(e)}>
-              {/* <Image source={male} style={{ height: '80%' }} resizeMode={'contain'}></Image>
-            <Image source={male} style={{ height: '80%' }} resizeMode={'contain'}></Image>
-            <Image source={male} style={{ height: '80%' }} resizeMode={'contain'}></Image> */}
-              <View style={{ width: 335, height: "100%", backgroundColor: 'red' }}>
-                <Text>A</Text>
+              <View style={{ width: 335, height: "100%" }}>
+                <TouchableHighlight style={[styles.pillButtonSmall, styles.blue]}>
+                  <Text style={[styles.pillButtonText]}>Vrienden toevoegen</Text>
+                </TouchableHighlight>
+                <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                  <Text style={styles.friendNameTag}>Nick</Text>
+                  <Text style={styles.friendNameTag}>Jason</Text>
+                  <Text style={styles.friendNameTag}>Pieter</Text>
+                  <Text style={styles.friendNameTag}>Sjoerd</Text>
+                  <Text style={styles.friendNameTag}>Michael</Text>
+                </View>
               </View>
 
-              <View style={{ width: 335, height: "100%", backgroundColor: 'blue' }}>
-                <Text>A</Text>
+              <View style={{
+                width: 335, height: "100%", justifyContent: 'center',
+                alignItems: 'center'
+              }}>
+                <Image source={male} style={{ height: '80%' }} resizeMode={'contain'}></Image>
+
+                <TextInput style={[styles.pillButtonInput, styles.transparentGray]} textAlign={'center'}
+                  onChangeText={(text) => this.setState({ school: text })}
+                  value={"Naam"}>
+                </TextInput>
+                <TextInput style={[styles.pillButtonInput, styles.transparentGray]} textAlign={'center'}
+                  onChangeText={(text) => this.setState({ school: text })}
+                  value={"Wachtwoord"}>
+                </TextInput>
+
               </View>
 
-              <View style={{ width: 335, height: "100%", backgroundColor: 'white' }}>
-                <Text>A</Text>
+              <View style={{ width: 335, height: "100%" }}>
+                <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                  <Text style={styles.friendNameTag}>#1 Nick</Text>
+                  <Text style={styles.friendNameTag}>#2 Jason</Text>
+                  <Text style={styles.friendNameTag}>#3 Pieter</Text>
+                  <Text style={styles.friendNameTag}>#4 Sjoerd</Text>
+                  <Text style={styles.friendNameTag}>#5 Michael</Text>
+                </View>
               </View>
             </ScrollView>
           </View>
 
           <View>
-            <TouchableHighlight style={[styles.pillButton, styles.orange]} onPress={() => this.props.navigation.navigate('GameScreen')}>
+            <TouchableHighlight style={[styles.pillButton, styles.orange]} onPress={() => this.props.navigation.navigate('SelectionScreen')}>
               <Text style={[styles.pillButtonText]}>Terug</Text>
             </TouchableHighlight>
           </View>
@@ -105,6 +132,37 @@ const styles = StyleSheet.create({
     paddingRight: 30,
     height: '50%',
   },
+  friendNameTag: {
+    color: 'rgba(255,255,255,0.5)',
+    marginBottom: 10,
+    fontSize: 25
+  },
+
+  pillButtonInput: {
+    borderRadius: 64,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 5,
+    marginBottom: 5,
+    marginLeft: 5,
+    marginRight: 5,
+    padding: 5,
+    width: "50%",
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  pillButtonSmall: {
+    borderRadius: 64,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 20,
+    marginBottom: 20,
+    marginLeft: 20,
+    marginRight: 20,
+    padding: 10
+  },
+
   pillButton: {
     paddingTop: 20,
     paddingBottom: 20,
@@ -132,6 +190,9 @@ const styles = StyleSheet.create({
     height: "75%",
     marginBottom: 20,
     marginTop: 20
+  },
+  transparentGray: {
+    backgroundColor: 'rgba(255, 255, 255, 0.8)'
   }
 });
 

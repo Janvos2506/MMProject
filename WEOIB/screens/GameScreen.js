@@ -34,7 +34,7 @@ export default class GameScreen extends React.Component {
                 }}>
                     <Text>Terug</Text>
                 </TouchableHighlight>
-                <TouchableHighlight style={{
+                <TouchableHighlight onPress={() => this.props.navigation.navigate('Map')} style={{
                     position: 'absolute', top: "50%", left: 0, width: "50%", height: "50%", flex: 1,
                     justifyContent: 'center',
                     alignItems: 'center'
