@@ -28,8 +28,9 @@ export default class SafeSearchScreen extends React.Component {
     async componentDidMount() {
         this.StartImageRotateFunction();
         setInterval(async () => {
-            let headingAll = await Location.getHeadingAsync();
-            let heading = headingAll.magHeading;
+            //let headingAll = await Location.getHeadingAsync();
+            //let heading = headingAll.magHeading;
+            heading = 160
             heading = (heading - (this.state.correction));
             heading = this.mod(heading, 360);
             this.setState({ heading: heading })

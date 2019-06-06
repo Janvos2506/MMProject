@@ -30,19 +30,19 @@ export default class SelectionScreen extends React.Component {
             </TouchableHighlight>
 
             <TouchableHighlight style={[styles.pillButton, styles.blue]}>
-              <Text style={[styles.pillButtonText]} >Punten</Text>
+              <Text style={[styles.pillButtonText]}>Shop</Text>
             </TouchableHighlight>
 
             <TouchableHighlight style={[styles.pillButton, styles.blue]} onPress={() => this.props.navigation.navigate('ProfileScreen')}>
-              <Text style={[styles.pillButtonText]} >Profiel</Text>
+              <Text style={[styles.pillButtonText]}>Profiel</Text>
             </TouchableHighlight>
 
             <TouchableHighlight style={[styles.pillButton, styles.blue]}>
-              <Text style={[styles.pillButtonText]} >Uitleg</Text>
+              <Text style={[styles.pillButtonText]}>Uitleg</Text>
             </TouchableHighlight>
 
             <TouchableHighlight style={[styles.pillButton, styles.orange]}>
-              <Text style={[styles.pillButtonText]} >Uitloggen</Text>
+              <Text style={[styles.pillButtonText]}>Uitloggen</Text>
             </TouchableHighlight>
           </View>
         </View>

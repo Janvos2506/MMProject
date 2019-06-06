@@ -19,34 +19,34 @@ export default class GameScreen extends React.Component {
 
     render() {
         return (
-            <ImageBackground source={gameBackground} style={{ width: '100%', height: '100%' }} resizeMode='cover'>
+            <ImageBackground source={gameBackground} style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center' }} resizeMode='stretch'>
                 <TouchableHighlight style={{
                     position: 'absolute', top: 0, left: 0, width: "50%", height: "50%", flex: 1,
                     justifyContent: 'center',
                     alignItems: 'center'
                 }}>
-                    <Text>Ooijpolder</Text>
+                    <Text></Text>
                 </TouchableHighlight>
                 <TouchableHighlight style={{
                     position: 'absolute', top: 0, left: "50%", width: "50%", height: "50%", flex: 1,
                     justifyContent: 'center',
                     alignItems: 'center'
-                }}>
-                    <Text>Terug</Text>
+                }} onPress={() => this.props.navigation.navigate('SelectionScreen')}>
+                    <Text></Text>
                 </TouchableHighlight>
                 <TouchableHighlight onPress={() => this.props.navigation.navigate('Map')} style={{
                     position: 'absolute', top: "50%", left: 0, width: "50%", height: "50%", flex: 1,
                     justifyContent: 'center',
                     alignItems: 'center'
                 }}>
-                    <Text>Route</Text>
+                    <Text></Text>
                 </TouchableHighlight>
                 <TouchableHighlight style={{
                     position: 'absolute', top: "50%", left: "50%", width: "50%", height: "50%", flex: 1,
                     justifyContent: 'center',
                     alignItems: 'center'
                 }}>
-                    <Text>Storyline</Text>
+                    <Text></Text>
                 </TouchableHighlight>
             </ImageBackground >
         );
