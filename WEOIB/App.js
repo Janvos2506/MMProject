@@ -10,6 +10,9 @@ import GameSelectionScreen from './screens/GameSelectionScreen';
 import MasterMindScreen from './screens/MasterMindScreen'
 import RegistrationScreen from "./screens/RegistrationScreen";
 import SelectionScreen from "./screens/SelectionScreen";
+import SpeurtochtOverviewScreen from "./screens/SpeurtochtOverviewScreen";
+import GameScreen from "./screens/GameScreen";
+import ProfileScreen from "./screens/ProfileScreen";
 const AppNavigator = createStackNavigator(
   {
     Home: HomeScreen,
@@ -20,7 +23,10 @@ const AppNavigator = createStackNavigator(
     GameSelectionScreen: GameSelectionScreen,
     MasterMindScreen: MasterMindScreen,
     RegistrationScreen: RegistrationScreen,
-    SelectionScreen: SelectionScreen
+    SelectionScreen: SelectionScreen,
+    SpeurtochtOverviewScreen: SpeurtochtOverviewScreen,
+    GameScreen: GameScreen,
+    ProfileScreen: ProfileScreen
   },
   {
     initialRouteName: "Home"
