@@ -29,7 +29,7 @@ const AppNavigator = createStackNavigator(
     ProfileScreen: ProfileScreen
   },
   {
-    initialRouteName: "Map"
+    initialRouteName: "MasterMindScreen"
   }
 );
 const AppContainer = createAppContainer(AppNavigator);
