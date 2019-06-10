@@ -47,7 +47,7 @@ export default class MasterMindScreen extends React.Component {
         let correctCode = [...this.state.code];
 
         if (code.join() == correctCode.join())
-            console.log('goteem');
+            this.props.navigation.navigate('ARViewScreen');
 
         [...code].forEach((c, i) => {
             if (correctCode[i] == c)

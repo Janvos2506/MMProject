@@ -13,6 +13,7 @@ import SelectionScreen from "./screens/SelectionScreen";
 import SpeurtochtOverviewScreen from "./screens/SpeurtochtOverviewScreen";
 import GameScreen from "./screens/GameScreen";
 import ProfileScreen from "./screens/ProfileScreen";
+import ARViewScreen from "./screens/ARViewScreen";
 const AppNavigator = createStackNavigator(
   {
     Home: HomeScreen,
@@ -26,10 +27,11 @@ const AppNavigator = createStackNavigator(
     SelectionScreen: SelectionScreen,
     SpeurtochtOverviewScreen: SpeurtochtOverviewScreen,
     GameScreen: GameScreen,
-    ProfileScreen: ProfileScreen
+    ProfileScreen: ProfileScreen,
+    ARViewScreen: ARViewScreen
   },
   {
-    initialRouteName: "MasterMindScreen"
+    initialRouteName: "Home"
   }
 );
 const AppContainer = createAppContainer(AppNavigator);

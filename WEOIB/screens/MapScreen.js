@@ -142,7 +142,7 @@ export default class MapScreen extends React.Component {
           </MapView>
           <View style={{ position: 'absolute', left: '5%', top: '60%' }}>
             <Animated.View style={[{ transform: [{ rotate: interpolatedRotateAnimation }] }]}>
-              <TouchableHighlight onPress={() => this.props.navigation.navigate('MasterMindScreen')}>
+              <TouchableHighlight onPress={() => this.props.navigation.navigate('ARViewScreen')}>
                 <Image source={compassNeedle} ></Image>
               </TouchableHighlight>
             </Animated.View>
