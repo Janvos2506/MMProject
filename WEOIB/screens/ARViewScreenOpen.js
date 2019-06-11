@@ -139,7 +139,7 @@ export default class ARViewScreenOpen extends React.Component {
         if (!this.renderer) {
             return;
         }
-        this.props.navigation.navigate('Map');
+        this.props.navigation.push('Map', { newMarker: { latitude: 51.862052, longitude: 5.895363 } });
     };
 }
 

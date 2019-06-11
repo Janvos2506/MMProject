@@ -21,12 +21,20 @@ export default class MapScreen extends React.Component {
   constructor(props) {
     super(props);
     this.RotateValueHolder = new Animated.Value(0);
+    const newMarker = this.props.navigation.getParam('newMarker', false);
+    const markers = [{
+      latitude: 51.849582,
+      longitude: 5.874064,
+    }]
+    if (newMarker != false) {
+      markers.push(newMarker);
+    }
+
+    console.log('router params', newMarker);
+
     this.state = {
       scanning: false,
-      markers: [{
-        latitude: 51.849582,
-        longitude: 5.874064,
-      }],
+      markers: markers,
       allMarkers: [
 
       ],

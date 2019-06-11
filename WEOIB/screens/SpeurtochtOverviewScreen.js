@@ -21,7 +21,7 @@ export default class SpeurtochtOverviewScreen extends React.Component {
     super(props);
     this.state = {
       showInformation: false,
-      information: "Informatie Informatie Informatie Informatie Informatie Informatie Informatie Informatie Informatie Informatie Informatie Informatie "
+      information: "Deze speurtocht gaat over wat er in de Ooijpolder gebeurd is."
     }
   }
 

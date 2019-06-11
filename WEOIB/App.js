@@ -33,7 +33,7 @@ const AppNavigator = createStackNavigator(
     ARViewScreenOpen: ARViewScreenOpen
   },
   {
-    initialRouteName: "Map"
+    initialRouteName: "Home"
   }
 );
 const AppContainer = createAppContainer(AppNavigator);
