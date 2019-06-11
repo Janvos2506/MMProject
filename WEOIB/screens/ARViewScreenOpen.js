@@ -8,7 +8,7 @@ import TouchableView from './TouchableView';
 let safeModel = null;
 // https://blog.expo.io/arkit-in-react-native-tutorial-the-basics-9f839539f0b9
 
-export default class ARViewScreen extends React.Component {
+export default class ARViewScreenOpen extends React.Component {
 
     async componentDidMount() {
         THREE.suppressExpoWarnings(true)
@@ -139,7 +139,7 @@ export default class ARViewScreen extends React.Component {
         if (!this.renderer) {
             return;
         }
-        this.props.navigation.navigate('MasterMindScreen');
+        this.props.navigation.navigate('Map');
     };
 }
 
