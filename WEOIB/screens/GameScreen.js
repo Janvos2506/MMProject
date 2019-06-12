@@ -45,7 +45,7 @@ export default class GameScreen extends React.Component {
                     position: 'absolute', top: "50%", left: "50%", width: "50%", height: "50%", flex: 1,
                     justifyContent: 'center',
                     alignItems: 'center'
-                }}>
+                }} onPress={() => this.props.navigation.navigate('StorylineScreen')}>
                     <Text></Text>
                 </TouchableHighlight>
             </ImageBackground >

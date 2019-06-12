@@ -16,6 +16,7 @@ import ProfileScreen from "./screens/ProfileScreen";
 import ARViewScreen from "./screens/ARViewScreen";
 import ARViewScreenOpen from "./screens/ARViewScreenOpen";
 import IntroScreen from "./screens/IntroScreen";
+import StorylineScreen from "./screens/StorylineScreen";
 
 const AppNavigator = createStackNavigator(
   {
@@ -33,7 +34,8 @@ const AppNavigator = createStackNavigator(
     GameScreen: GameScreen,
     ProfileScreen: ProfileScreen,
     ARViewScreen: ARViewScreen,
-    ARViewScreenOpen: ARViewScreenOpen
+    ARViewScreenOpen: ARViewScreenOpen,
+    StorylineScreen: StorylineScreen
   },
   {
     initialRouteName: "IntroScreen"
