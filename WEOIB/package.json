@@ -18,7 +18,7 @@
     "react-native-heading": "^1.1.1",
     "react-native-maps": "^0.24.2",
     "react-navigation": "^3.0.9",
-    "three": "^0.104.0",
+    "three": "^0.125.0",
     "expo-asset-utils": "^1.1.1",
     "expo-graphics": "^1.1.0",
     "expo-three": "^3.0.0-alpha.8"
